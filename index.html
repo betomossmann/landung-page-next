@@ -12,12 +12,22 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Create a new title</title>
   </head>
-  <body class="main-bg">
+  <body>
+    <input
+      id="close-menu"
+      class="close-menu"
+      type="checkbox"
+      aria-label="Close menu"
+      role="button"
+    />
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <aside class="menu white-bg">
       <div class="main-content menu-content">
-        <h1><a href="#">LOGO</a></h1>
+        <h1 onclick="getElementById('close-menu').checked = false;">
+          <a href="#">LOGO</a>
+        </h1>
         <nav>
-          <ul>
+          <ul onclick="getElementById('close-menu').checked = false;">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#assistance">Assistance</a></li>
@@ -27,9 +37,8 @@
         </nav>
       </div>
     </aside>
-
     <div class="menu-spacing"></div>
-<!-- HOME -->
+    <!-- HOME -->
     <section id="home" class="home main-bg section">
       <div class="main-content home-content">
         <div class="home-text-content">
@@ -44,7 +53,7 @@
         </div>
       </div>
     </section>
-<!-- ABOUT -->
+    <!-- ABOUT -->
     <section id="about" class="white-bg section">
       <dir class="main-content about-content">
         <h2>MARIANA BARCELLOS</h2>
@@ -84,7 +93,7 @@
         </p>
       </dir>
     </section>
-<!-- ASSISTANCE -->
+    <!-- ASSISTANCE -->
     <section id="assistance" class="assistance main-bg section">
       <div class="main-content assistance-content assistance-text">
         <article>
@@ -118,7 +127,7 @@
         </article>
       </div>
     </section>
-<!-- MENTORING -->
+    <!-- MENTORING -->
     <section id="mentoring" class="assistance white-bg section">
       <div class="main-content assistance-content assistance-text">
         <div class="mentoring-img">
@@ -159,13 +168,10 @@
         </div>
       </div>
     </section>
-<!-- CONTACT -->
+    <!-- CONTACT -->
     <section id="contact" class="home main-bg section">
       <div class="main-content home-content">
-        <div class="home-text-content">
-          <h2>Mariana Barcellos</h2>
-          <p>Psychoanalysis</p>
-        </div>
+        <div class="home-text-content"></div>
         <div class="home-img">
           <img
             src="../../assets/img/contact.svg"
@@ -177,22 +183,43 @@
             <legend>Contact me</legend>
             <div class="form-group">
               <label for="first-name">First Name</label>
-              <input type="text" name="first-name" id="first-name" placeholder="Your Name">
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder="Your Name"
+              />
             </div>
 
             <div class="form-group">
               <label for="last-name">Last Name</label>
-              <input type="text" name="last-name" id="last-name" placeholder="Your Last Name">
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder="Your Last Name"
+              />
             </div>
-            
+
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" name="email" id="email" placeholder="E-mail">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
             </div>
 
             <div class="form-group full-width">
               <label for="message">Message</label>
-              <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Your Message"
+              ></textarea>
             </div>
 
             <div class="form-group full-width">
@@ -202,5 +229,13 @@
         </div>
       </div>
     </section>
+    <footer id="footer" class="footer white-bg">
+      <p>
+        <a href="http://github.com/betomossmann" target="_blank" rel="nofollow">
+          Made by Bdev
+        </a>
+      </p>
+    </footer>
+    <a class="back-to-top" href="#">➦</a>
   </body>
 </html>
